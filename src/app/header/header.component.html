@@ -1,0 +1,37 @@
+<div [className]="head== 5 ? 'header' : 'header-fixed'">
+    <div style="
+                width:25%;
+                display:flex">
+        <div>
+            <img 
+                id="icon" 
+                src="../../assets/soligram-icon.png">
+        </div>
+        <div style="width:25%">
+            <img 
+                id="soligram" 
+                src="../../assets/soligram.png" 
+                style=
+                    "margin:5px 0px;
+                    height:30px;
+                    width:100px;"
+            >
+        </div>
+    </div>
+    <div id="searchbox" style="width:25%">
+        <img 
+            id="sear" 
+            src="../../assets/search.png"
+        >
+        <input tohigh type="text" id="search" placeholder="Search">
+        <img id="cancel" src="../../assets/cancel.png">
+    </div>
+    <div style="width:25%">
+        <img 
+            id="logout" 
+            src="../../assets/logout.png" (click)="titleService.setTitle('good')" 
+        >
+    </div>
+    <a RouterLink='/login'>login</a>
+</div>
+<router-outlet></router-outlet>

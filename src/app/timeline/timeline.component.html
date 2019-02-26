@@ -1,0 +1,44 @@
+<div class="timeline">
+  <ul class="timeline-data">
+    <li *ngFor="let post of arra">
+      <div class="timeline-post">
+        <div class="timeline-header">
+          <div style=" 
+                background-color:rgb(38, 89, 255);
+                width:60px;
+                height:60px;margin:10px 0px;
+                border-radius:50%;
+                position: relative;float: left;">
+            <div style="
+                    background-color:white;
+                    border-radius:50%;
+                    margin:7.5%;
+                    width:85%;
+                    height:85%;
+                    position:absolute;">
+              <a  href="../../assets/{{timelinedata[post-1].poster_user}}.png">
+                <img  src="../../assets/{{timelinedata[post-1].poster_user}}.png" 
+                      style="
+                            margin:5%;
+                            width:90%;
+                            height:90% ;
+                            border-radius:50%;" 
+                  />
+              </a>
+            </div>
+          </div>
+          <span class="name">{{timelinedata[post-1].poster_user}}</span>
+        </div>
+        <div class="timeline-image">
+          <img src="{{timelinedata[post-1].poster_link}}">
+        </div>
+        <div class="timeline-footer">
+          <img src="../../assets/{{timelinedata[post-1].poster_like}}.png" (click)="like(post)">
+          <img src="../../assets/comment.png">
+          <p>{{timelinedata[post-1].poster_date}}</p>
+          <input type="text" size="40" placeholder="Add a comment...">
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
